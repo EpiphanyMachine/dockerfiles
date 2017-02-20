@@ -1,11 +1,11 @@
 # Run postgres server for local development
 
-# docker volume create -d local --opt o=size=10GB hint-pg-data
+# docker volume create -d local hint-pg-data
 # docker run -d \
-#     -v hint-pg-data:/var/lib/postgresql
+#     -v hint-pg-data:/var/lib/postgresql/data \
 #     -p 5555:5432 \
 #     --name hint-pg \
-#     EpiphanyMachine/postgres
+#     epiphanymachine/postgres
 
 FROM ubuntu:16.04
 MAINTAINER EpiphanyMachine@gmail.com
