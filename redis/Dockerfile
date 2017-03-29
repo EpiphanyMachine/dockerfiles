@@ -2,6 +2,7 @@
 
 # docker volume create -d local hint-redis-data
 # docker run -d \
+#     --restart always \
 #     -v hint-redis-data:/data \
 #     -p 6888:6379 \
 #     --name hint-redis \
@@ -9,6 +10,7 @@
 
 # docker volume create -d local hint-redis-cache-data
 # docker run -d \
+#     --restart always \
 #     -v hint-redis-cache-data:/data \
 #     -p 6889:6379 \
 #     --name hint-redis-cache \

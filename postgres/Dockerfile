@@ -2,6 +2,7 @@
 
 # docker volume create -d local hint-pg-data
 # docker run -d \
+#     --restart always \
 #     -v hint-pg-data:/var/lib/postgresql \
 #     -p 5555:5432 \
 #     --name hint-pg \
