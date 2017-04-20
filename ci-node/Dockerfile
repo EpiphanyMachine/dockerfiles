@@ -22,8 +22,9 @@ RUN set -xe \
     && cd /usr/local/heroku \
     && wget -qO- https://s3.amazonaws.com/assets.heroku.com/heroku-client/heroku-client.tgz | tar xz \
     && mv heroku-client/* . \
-    && rmdir heroku-client \
-    && echo 'PATH=\"/usr/local/heroku/bin:\$PATH\"' >> ~/.profile
+    && rmdir heroku-client
+
+ENV PATH $PATH:/usr/local/heroku/bin
 
 # Define working directory.
 WORKDIR /data
